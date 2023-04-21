@@ -1,0 +1,62 @@
+<!-- HTML code to add icon in the title bar -->
+<!DOCTYPE html>
+<html>
+       <head>
+            <meta charset = "utf-8" />
+          
+            <title>
+                           ECAPCC:Admin
+            </title>
+          
+            <!-- add icon link -->
+            <link rel = "icon" href =  "apc-college-logo.png" type = "image/x-icon">
+            <link rel="stylesheet" href="CSSforAdminLogin.css">
+
+            <script>
+                function av(){
+                    var username=document.getElementById("username").value;
+                    var password=document.getElementById("password").value;
+             
+                    if(username=="suvojit" && password=="1234"){
+                    window.location.assign('#');
+                    alert("login successful, press OK");
+                    }
+                else{
+                    alert("plese check your password");
+                    return;
+                    }
+                }
+            </script>
+    </head>
+
+    <body>
+          <nav>
+                       <div class="logo">
+               
+                                <p><h1> Welcome To Admin Login Page of Election commission of Acharya Prafulla Chandra College</h1></p>
+
+                        </div>
+
+            <br>
+            <br>
+            <br>
+        <div>
+        <button type="button" onclick="location.href='Home.html'">Back To Home</button>
+        </div>
+
+        <br><br>
+
+   <div class="input">
+         <h1>Enter Your ID</h1><input type="text" placeholder="user name" id="username"><Br><br>
+         <H1>Enter Your Password</H1><input type="text" placeholder="password" id="password"><br><br><br>
+
+        <div class="b">
+             <input type ="button" onclick="av()" value="Login">
+        </div>
+   </div>
+
+ </nav>
+
+ <br><br><br>
+
+ </body>
