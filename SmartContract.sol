@@ -40,7 +40,7 @@ Candidate[] public Candidates;                      //Array of Candidates
         Voters[_voter].access = true;
     }
 
-    function voting(uint _Candidate) public {       //the Actual Voting happing here
+    function voting(uint _Candidate) public {           //the Actual Voting happing here
         Voter storage Sender = Voters[msg.sender];
         require(Sender.access,"This address have no Access to Vote");
         require(!Sender.voted,"This address have already Voted");
