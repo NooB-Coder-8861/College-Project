@@ -13,3 +13,5 @@ Online Voting System using Blockchain Technology
 
 22/04/2023 --> <span style="color:lightgreen">Adminlogin.html</span> uplode & update <span style="color:blue">v0.1.1</span> <br>
 22/04/2023 --> <span style="color:lightgreen">CSSforAdminLogin.css</span> uplode <span style="color:blue">v0.1.0</span> <br>
+
+23/04/2023 --> <span style="color:lightgreen">SmartContract.sol</span> uplode <span style="color:blue">v0.0.2</span> <br>
