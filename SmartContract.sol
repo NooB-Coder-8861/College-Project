@@ -1,5 +1,5 @@
 pragma solidity >=0.5.0<0.9.0;                      //setting a long range to avoid any syntactical error
-
+pragma experimental ABIEncoderV2;                   //Without this Showing Error
 
 contract Vote{                                      //Smart Contract
 
@@ -13,7 +13,7 @@ Candidate[] public Candidates;                      //Array of Candidates
     struct Voter{                                   //Structure for Voters
         bool voted;
         bool access;
-        uint index;
+        uint vote;
     }
 
     mapping(address => Voter) public Voters;        //List of Voters
@@ -30,5 +30,24 @@ Candidate[] public Candidates;                      //Array of Candidates
                 voteCount: 0
             }));
         }
+    }
+
+    function giveAccessToVote(address _voter) public {//giving eligible voters Access to vote
+        require(msg.sender == admin,"Only Admin Can Give Access to Vote");
+        require(!Voters[_voter].voted,"This address have already voted");
+        require(!Voters[_voter].access,"This address already have Access to Vote");
+
+        Voters[_voter].access = true;
+    }
+
+    function voting(uint _Candidate) public {       //the Actual Voting happing here
+        Voter storage Sender = Voters[msg.sender];
+        require(Sender.access,"This address have no Access to Vote");
+        require(!Sender.voted,"This address have already Voted");
+        Sender.vote = _Candidate;
+        Sender.voted = true;
+        Sender.vote = _Candidate;
+
+        Candidates[_Candidate].voteCount = Candidates[_Candidate].voteCount + 1;
     }
 }
