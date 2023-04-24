@@ -1,0 +1,76 @@
+<!-- HTML code to add icon in the title bar -->
+<!DOCTYPE html>
+<html>
+       <head>
+                  <meta charset = "utf-8" />
+          
+                   <title>
+                           ECAPCC: User login
+                    </title>
+          
+    <!-- add icon link -->
+                      <link rel = "icon" href =  "C:\Users\sayan\OneDrive\Desktop\Sol\Project\College-Project\Resource\College Icon.jpg" type = "image/x-icon">
+          
+                        <link rel="stylesheet" href="CSSforUserlogin.css">
+    </head>
+
+
+
+    <body>
+          <nav>
+                       <div class="logo">
+               
+                                <p><h1> Welcome To user Login Page of Election commission of Acharya Prafulla Chandra College</h1></p>
+
+                        </div>
+
+            <br>
+            <br>
+            <br>
+        <div>
+        <button type="button" onclick="location.href='Home.html'">Back To Home</button>
+        </div>
+
+        <br><br>
+
+   <div class="input">
+       <div class="text">
+         <h1>Enter Your ID</h1><input type="text" placeholder="user name" id="username"><Br><br>
+         <H1>Enter Your Password</H1><input type="text" placeholder="password" id="password"><br><br><br>
+       </div>
+        <div class="b">
+             <input type ="button" onclick="av()" value="Login">
+             <h5>don't have account?
+               <a href="user signup.html">click here</a>
+             </h5>
+
+        </div>
+   </div>
+
+ </nav>
+
+ <br><br><br>
+
+ </body>
+
+
+
+
+ <script>
+
+   function av(){
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("password").value;
+
+    if(username=="suvojit" && password=="1234"){
+     window.location.assign('#');
+      alert("login successful, press OK");
+}
+ else{
+  alert("plese check your password");
+  return;
+ }
+
+}
+
+ </script>
