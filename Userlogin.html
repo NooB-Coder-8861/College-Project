@@ -35,7 +35,7 @@
 
    <div class="input">
        <div class="text">
-         <h1>Enter Your ID</h1><input type="text" placeholder="user name" id="username"><Br><br>
+         <h1>Enter Your ID</h1><input type="text" placeholder="email" id="username"><Br><br>
          <H1>Enter Your Password</H1><input type="text" placeholder="password" id="password"><br><br><br>
        </div>
         <div class="b">
@@ -62,12 +62,12 @@
     var username=document.getElementById("username").value;
     var password=document.getElementById("password").value;
 
-    if(username=="suvojit" && password=="1234"){
+    if(username== <!-- EmailID from the data base -->  && password== <!-- password from the data base --> ){
      window.location.assign('#');
       alert("login successful, press OK");
 }
  else{
-  alert("plese check your password");
+  alert("plese check your Email ID or password");
   return;
  }
 
