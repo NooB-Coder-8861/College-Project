@@ -17,3 +17,5 @@ Online Voting System using Blockchain Technology
 
 24/04/2023 --> <span style="color:lightgreen">Userlogin.html</span> uplode <span style="color:blue">v0.1.0</span> <br>
 24/04/2023 --> <span style="color:lightgreen">CSSforUserlogin.css</span> uplode <span style="color:blue">v0.1.0</span> <br><br>
+
+25/04/2023 --><span style="color:lightgreen">Home.html</span> update <span style="color:blue">v0.1.3</span> <br>
