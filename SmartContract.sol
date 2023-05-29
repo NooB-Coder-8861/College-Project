@@ -50,4 +50,18 @@ Candidate[] public Candidates;                      //Array of Candidates
 
         Candidates[_Candidate].voteCount = Candidates[_Candidate].voteCount + 1;
     }
+
+    function winningProposal() internal view returns (uint winningProposal_) {
+        uint winningVoteCount = 0;
+        for (uint p = 0; p < Candidates.length; p++) {
+            if (Candidates[p].voteCount > winningVoteCount) {
+                winningVoteCount = Candidates[p].voteCount;
+                winningProposal_ = p;
+            }
+        }
+    }
+    
+    function winnerName() public view returns (string memory winnerName_) {
+        winnerName_ = Candidates[winningProposal()].name;
+    }
 }
